@@ -12,6 +12,7 @@ RUN cp -r /data/build/node_modules /build/frontend/ && \
     cd /build/frontend && \
     gulp build-prod && \
     cp -r /build/frontend/build/. /usr/local/apache2/htdocs/ && \
+    rm -rf /data && \
     rm -rf /build/frontend
 
 WORKDIR /usr/local/apache2/htdocs/
